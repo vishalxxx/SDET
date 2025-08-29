@@ -33,6 +33,7 @@ jobs:
               -r cli, htmlextra
 
       - name : Saving Newman Report
+        if : always()
         uses: actions/upload-artifact@v4.6.2
         with:
           name : Newman Report
