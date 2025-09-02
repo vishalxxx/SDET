@@ -12,16 +12,21 @@ jobs:
   performing-jobs:
     runs-on: label-github-ec2-runer
     steps:
+      - name: checkout repository to runner
+        uses: actions/checkout@v5.0.0
+
+        
       - name: installing node js and npm
         uses: actions/setup-node@v3.9.1
+        with:
+          node-version: '22'
 
       - name: installing npm and newman with htmlextra
         run: |
               npm install -g newman
               npm install -g newman-reporter-htmlextra
 
-      - name: checkout repository to runner
-        uses: actions/checkout@v5.0.0
+
 
       - name: running collection
         run: |
