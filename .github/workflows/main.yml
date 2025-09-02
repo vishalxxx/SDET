@@ -59,7 +59,8 @@ jobs:
           body: | 
                   Hi all , 
                   this is the testing Report email. We are not using the attachments: key here since it will attach 50MB of file that's
-                  going to store inside Google Drive. But it's Maximum file attachment is 25 MB for email.
+                  going to store inside Google Drive. But it's Maximum file attachment is 25 MB for email. Link to Workflow file is 
+                  Link : https://vishalxxx.github.io/SDET/
           
           
           
