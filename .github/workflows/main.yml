@@ -10,7 +10,7 @@ on :
 
 jobs:
   performing-jobs:
-    runs-on: ubuntu-latest
+    runs-on: label-github-ec2-runer
     steps:
       - name: installing node js and npm
         uses: actions/setup-node@v3.9.1
