@@ -44,7 +44,25 @@ jobs:
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
           publish_dir: newman/
-        
+
+      - name: Sending mail to recipents
+        if: always()
+        uses: dawidd6/action-send-mail@v6
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: Report for Phoneix apllication Flow
+          to: ${{ secrets.EMAIL_USERNAME }}
+          from: ${{ secrets.EMAIL_USERNAME }}
+          body: | 
+                  Hi all , 
+                  this is the testing Report email. We are not using the attachments: key here since it will attach 50MB of file that's
+                  going to store inside Google Drive. But it's Maximum file attachment is 25 MB for email.
+          
+          
+          
               
 
               
