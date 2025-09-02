@@ -10,7 +10,7 @@ on :
 
 jobs:
   performing-jobs:
-    runs-on: label-github-ec2-runer
+    runs-on: ubuntu-latest #label-github-ec2-runer
     steps:
       - name: checkout repository to runner
         uses: actions/checkout@v5.0.0
